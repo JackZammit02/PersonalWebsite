@@ -11,22 +11,19 @@ body {
 }
 
 .header {
-padding: 40px; /* some padding */
-text-align: center; /* center the text */
-background-image: url("../images/headerbackground.png");
-color: white; /* white text color */
+  padding: 40px;
+  text-align: center;
+  background-image: url("../images/headerbackground.png");
+  color: white;
 }
 
-/* Increase the font size of the <h1> element */
 .header h1 {
   font-size: 40px;
 }
 
-/* Ensure proper sizing */
 * {
   box-sizing: border-box;
 }
-
 
 .topnav {
   background-color: #000000f6;
@@ -63,9 +60,6 @@ color: white; /* white text color */
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 785px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -79,77 +73,94 @@ color: white; /* white text color */
   }
 }
 
-/* Main column */
 .main {
-  flex: 70%; /* Set the width of the main content */
-  padding: 20px; /* Some padding */
+  flex: 70%;
+  padding: 20px;
   padding-bottom: 50px;
   font-size: 19px;
 }
 
 .parallax {
-  /* The image used */
   background-image: url("../images/5594016.jpg");
-
-  /* Set a specific height */
   min-height: 500px;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-img {
-  float:left;
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.contact-info a {
+  color: #303fc5;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Jack Zammit</h1>
-    <p>Welcome to my website. Created by me, about me!</p>
-  </div>
+<div class="header">
+  <h1>Jack Zammit</h1>
+  <p>Welcome to my website. Created by me, about me!</p>
+</div>
 
-  <div class="topnav" id="myTopNav">
-    <a href="../home.html"><i class="fa fa-fw fa-home"></i>Home</a>
-    <a href="experience.html"><i class="fa fa-fw fa-money"></i>Work Experience</a>
-    <a href="education.html"><i class="fa fa-fw fa-book"></i>Education</a>
-    <a href="activities.html"><i class="fa fa-fw fa-soccer-ball-o"></i>Activities</a>
-    <a href="skills.html"><i class="fa fa-fw fa-laptop"></i>Skills</a>
-    <a class="active" href="contactme.html"><i class="fa fa-fw fa-envelope"></i>Contact Me</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+<div class="topnav" id="myTopNav">
+  <a href="../home.html"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="experience.html"><i class="fa fa-fw fa-money"></i>Work Experience</a>
+  <a href="education.html"><i class="fa fa-fw fa-book"></i>Education</a>
+  <a href="activities.html"><i class="fa fa-fw fa-soccer-ball-o"></i>Activities</a>
+  <a href="skills.html"><i class="fa fa-fw fa-laptop"></i>Skills</a>
+  <a class="active" href="contactme.html"><i class="fa fa-fw fa-envelope"></i>Contact Me</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
 <div class="parallax">
   <div class="main">
     <h2>Contact Me</h2>
-    <p>
-      <i class="fa fa-fw fa-phone"></i><b>Mobile Phone (US):</b> +1 (507)508-3581<br><br>
-      <i class="fa fa-fw fa-phone"></i><b>Mobile Phone (Malta):</b> +356 77459409<br><br>
-      <i class="fa fa-fw fa-envelope"></i><b>Email:</b> jackz@gustavus.edu<br><br>
-      <i class="fa fa-fw fa-location-arrow"></i><b>Address:</b> 800, W College Ave, St. Peter, MN 56082<br><br>
-      <i class="fa fa-fw fa-linkedin-square"></i><a href="https://www.linkedin.com/in/jack-zammit-1673b92a9" target="_blank">Linkedin</a>
-    </p>
+    <div class="contact-info">
+      <i class="fa fa-fw fa-phone"></i><b>Mobile Phone (US):</b> +1 (507) 508-3581<br>
+    </div>
+    <div class="contact-info">
+      <i class="fa fa-fw fa-phone"></i><b>Mobile Phone (Malta):</b> +356 7745 9409<br>
+    </div>
+    <div class="contact-info">
+      <i class="fa fa-fw fa-envelope"></i><b>Email:</b> <a href="mailto:jackz@gustavus.edu">jackz@gustavus.edu</a><br>
+    </div>
+    <div class="contact-info">
+      <i class="fa fa-fw fa-location-arrow"></i><b>Address:</b> 800, W College Ave, St. Peter, MN 56082<br>
+    </div>
+    <div class="contact-info">
+      <i class="fa fa-fw fa-linkedin-square"></i><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jack-zammit-1673b92a9" target="_blank">Jack Zammit</a>
+    </div>
   </div>
 </div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopNav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
 </body>
-</html> 
+</html>
+
 
  
