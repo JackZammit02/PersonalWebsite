@@ -63,9 +63,6 @@ color: white; /* white text color */
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 785px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -101,8 +98,9 @@ color: white; /* white text color */
   background-size: cover;
 }
 
-img {
-  float:left;
+.main img {
+  width:25%;
+  float: left;
 }
 
 </style>
@@ -115,7 +113,7 @@ img {
   </div>
 
   <div class="topnav" id="myTopNav">
-    <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i>Home</a>
     <a href="pages/experience.html"><i class="fa fa-fw fa-money"></i>Work Experience</a>
     <a href="pages/education.html"><i class="fa fa-fw fa-book"></i>Education</a>
     <a href="pages/activities.html"><i class="fa fa-fw fa-soccer-ball-o"></i>Activities</a>
@@ -130,7 +128,7 @@ img {
     <div class="main">
       <h2>A brief introduction</h2>
       <div class="img">
-        <img src="images/prefilepic.jpg" alt="Profile Pic" style="width:25%;height:10%;">
+        <img src="images/prefilepic.jpg" alt="Profile Pic" >
           <p style="padding-top: 1%;margin-left: 27%;">
             Welcome to my website! I'm Jack Zammit, a Computer Science major with a minor in Mathematics at Gustavus Adolphus College in Saint Peter, MN. As I pursue opportunities for a summer 2024 internship, 
             this platform serves to showcase my enthusiasm for computer science and my journey thus far.<br><br>
@@ -157,7 +155,7 @@ img {
 
   <script>
   function myFunction() {
-    var x = document.getElementById("myTopnav");
+    var x = document.getElementById("myTopNav");
     if (x.className === "topnav") {
       x.className += " responsive";
     } else {
