@@ -63,9 +63,6 @@ color: white; /* white text color */
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 785px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -101,8 +98,10 @@ color: white; /* white text color */
   background-size: cover;
 }
 
-img {
+.main img {
   float:left;
+  width:18%;
+  margin-right:20px;
 }
 
 </style>
@@ -126,22 +125,12 @@ img {
     </a>
   </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-
 <div class="parallax">
   <div class="main">
     <h2>Work Experience</h2>
     <div class="img">
-      <img src="../images/theProClinic.png" alt="Pro Clinic" style="width:18%;margin-right:20px;">
+      <img src="../images/theProClinic.png" alt="Pro Clinic">
+    </div>
         <p style="padding-top:1%">
         IT Helper and Receptionist<br>
         <b>The Pro Clinic</b> · Part-time<br>
@@ -153,9 +142,9 @@ function myFunction() {
         - Organized data using excel. <br><br>
         - Set up Wi-Fi services and payment systems.
       </p>
-    </div>
       <div class="img">
-        <img src="../images/gac-icon.png" alt="Gustavus" style="width:18%;margin-right:20px;">
+        <img src="../images/gac-icon.png" alt="Gustavus">
+      </div>
           <p style="padding-top:3%">
           Food Server<br>
           <b>Gustavus Adolphus College </b>· Part-time<br>
@@ -168,5 +157,17 @@ function myFunction() {
       </div>
   </div>
 </div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopNav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
 </body>
 </html> 
