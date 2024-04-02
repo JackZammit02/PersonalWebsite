@@ -11,22 +11,19 @@ body {
 }
 
 .header {
-padding: 40px; /* some padding */
-text-align: center; /* center the text */
-background-image: url("../images/headerbackground.png");
-color: white; /* white text color */
+  padding: 40px;
+  text-align: center;
+  background-image: url("../images/headerbackground.png");
+  color: white;
 }
 
-/* Increase the font size of the <h1> element */
 .header h1 {
   font-size: 40px;
 }
 
-/* Ensure proper sizing */
 * {
   box-sizing: border-box;
 }
-
 
 .topnav {
   background-color: #000000f6;
@@ -63,9 +60,6 @@ color: white; /* white text color */
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 785px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -79,22 +73,16 @@ color: white; /* white text color */
   }
 }
 
-/* Main column */
 .main {
-  flex: 70%; /* Set the width of the main content */
-  padding: 20px; /* Some padding */
+  flex: 70%;
+  padding: 20px;
   padding-bottom: 50px;
   font-size: 19px;
 }
 
 .parallax {
-  /* The image used */
   background-image: url("../images/5594016.jpg");
-
-  /* Set a specific height */
   min-height: 500px;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,13 +98,11 @@ color: white; /* white text color */
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -124,9 +110,9 @@ color: white; /* white text color */
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  text-align: center;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -134,40 +120,87 @@ color: white; /* white text color */
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #5c5a5a;}
 
+/* Graphical enhancements */
+.dropdown-content p {
+  margin: 8px 0;
+}
 
+.dropbtn:hover {
+  cursor: pointer;
+}
+
+/* Center align dropdown button text */
+.dropbtn, .dropdown-content {
+  text-align: center;
+}
 </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Jack Zammit</h1>
-    <p>Welcome to my website. Created by me, about me!</p>
-  </div>
+<div class="header">
+  <h1>Jack Zammit</h1>
+  <p>Welcome to my website. Created by me, about me!</p>
+</div>
 
-  <div class="topnav" id="myTopNav">
-    <a href="../home.html"><i class="fa fa-fw fa-home"></i>Home</a>
-    <a href="experience.html"><i class="fa fa-fw fa-money"></i>Work Experience</a>
-    <a href="education.html"><i class="fa fa-fw fa-book"></i>Education</a>
-    <a href="activities.html"><i class="fa fa-fw fa-soccer-ball-o"></i>Activities</a>
-    <a class="active" href="skills.html"><i class="fa fa-fw fa-laptop"></i>Skills</a>
-    <a href="contactme.html"><i class="fa fa-fw fa-envelope"></i>Contact Me</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+<div class="topnav" id="myTopNav">
+  <a href="../home.html"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="experience.html"><i class="fa fa-fw fa-money"></i>Work Experience</a>
+  <a href="education.html"><i class="fa fa-fw fa-book"></i>Education</a>
+  <a href="activities.html"><i class="fa fa-fw fa-soccer-ball-o"></i>Activities</a>
+  <a class="active" href="skills.html"><i class="fa fa-fw fa-laptop"></i>Skills</a>
+  <a href="contactme.html"><i class="fa fa-fw fa-envelope"></i>Contact Me</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="parallax">
+  <div class="main">
+    <h2>Skills</h2>
+    <div class="dropdown">
+      <button class="dropbtn">Coding Languages</button>
+      <div class="dropdown-content">
+        <p>HTML</p>
+        <p>C</p>
+        <p>Python</p>
+        <p>Java</p>
+        <p>SQL</p>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Personality</button>
+      <div class="dropdown-content">
+        <p>Team Oriented</p>
+        <p>Dedicated</p>
+        <p>Motivated</p>
+        <p>Persevering</p>
+        <p>Caring</p>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Other Skills</button>
+      <div class="dropdown-content">
+        <p>Microsoft Excel</p>
+        <p>Customer Service</p>
+        <p>Problem Solving</p>
+        <p>Algorithms</p>
+        <p>Linux</p>
+      </div>
+    </div>
   </div>
+</div>
 
 <script>
 function myFunction() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("myTopNav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
@@ -176,43 +209,5 @@ function myFunction() {
 }
 </script>
 
-<div class="parallax">
-  <div class="main">
-    <h2>Skills</h2>
-    <div class="dropdown">
-      <button class="dropbtn">Coding Languages</button>
-      <div class="dropdown-content">
-        <p style="text-align: center;">HTML</p>
-        <p style="text-align: center;">C</p>
-        <p style="text-align: center;">Python</p>
-        <p style="text-align: center;">Java</p>
-        <p style="text-align: center;">SQL</p>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Personality</button>
-      <div class="dropdown-content">
-        <p style="text-align: center;">Team Oriented</p>
-        <p style="text-align: center;">Dedicated</p>
-        <p style="text-align: center;">Motivated</p>
-        <p style="text-align: center;">Persevering</p>
-        <p style="text-align: center;">Caring</p>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Other Skills</button>
-      <div class="dropdown-content">
-        <p style="text-align: center;">Microsoft Excel</p>
-        <p style="text-align: center;">Customer Service</p>
-        <p style="text-align: center;">Problem Solving</p>
-        <p style="text-align: center;">Algorithms</p>
-        <p style="text-align: center;">Linux</p>
-      </div>
-    </div>
-
-  </div>
-</div>
 </body>
-</html> 
+</html>
