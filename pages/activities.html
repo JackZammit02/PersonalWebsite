@@ -63,9 +63,6 @@ color: white; /* white text color */
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 785px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -106,11 +103,9 @@ color: white; /* white text color */
   text-decoration: none;
   background-color: #EEEEEE;
   color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+  padding: 10px 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 5px;
 }
 
 .center {
@@ -141,17 +136,6 @@ color: white; /* white text color */
       <i class="fa fa-bars"></i>
     </a>
   </div>
-
-  <script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  </script>
 
 <div class="parallax">
   <div class="main">
@@ -187,7 +171,7 @@ color: white; /* white text color */
       in an article on the biggest newspaper in Malta for my performance, click the button below to be directed to the article: 
     </p>
     <p style= "text-align: center;">
-      <a href="https://sport.timesofmalta.com/2021/08/11/zammit-looking-to-build-on-impressive-first-senior-outing-in-fiba-games/" class = "button" target="_blank">Newspaper Article</a>
+      <a href="https://sport.timesofmalta.com/2021/08/11/zammit-looking-to-build-on-impressive-first-senior-outing-in-fiba-games/" class="button" target="_blank">Newspaper Article</a>
     </p>
     <p>
       Despite facing disappointment in not making the college team in my junior year, this setback catalyzed a deeper focus on Computer Science, ultimately steering me towards 
@@ -197,5 +181,17 @@ color: white; /* white text color */
     </p>
   </div>
 </div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopNav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
 </body>
 </html> 
